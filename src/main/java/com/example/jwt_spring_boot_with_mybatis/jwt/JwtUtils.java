@@ -13,6 +13,8 @@ import java.util.Date;
 @Component
 public class JwtUtils {
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
+
+    /* generate key for generate token */
     @Value("${jwt.secret}")
     private String jwtSecret;
     public static final long JWT_TOKEN_VALIDITY = 1000 * 600 * 600;

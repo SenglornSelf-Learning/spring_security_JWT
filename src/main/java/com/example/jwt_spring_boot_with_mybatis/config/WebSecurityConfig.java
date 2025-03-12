@@ -59,7 +59,7 @@ public class WebSecurityConfig {
                         .requestMatchers("/","/auth/login", "/swagger-ui/**",
                                 "/v3/api-docs/**",
                                 "/swagger-ui.html", "/auth/login").permitAll()
-                        .requestMatchers("/admin/**").hasAnyAuthority("ADMIN_ROLE")
+                        .requestMatchers("/admin/**").hasAnyAuthority("ADMIN")
                         .anyRequest().authenticated());
 
         http.authenticationProvider(authenticationProvider());
